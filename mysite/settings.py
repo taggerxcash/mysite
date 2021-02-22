@@ -25,7 +25,7 @@ SECRET_KEY = 'fo&t#%c)u$ambfmzw9b4xm+1#pgbtj0a^-^+97jvoi$+4_$9rs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://taggerxcash.pythonanywhere.com/']
+ALLOWED_HOSTS = ['taggerxcash.pythonanywhere.com']
 
 
 # Application definition

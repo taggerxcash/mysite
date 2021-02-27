@@ -25,12 +25,13 @@ SECRET_KEY = 'fo&t#%c)u$ambfmzw9b4xm+1#pgbtj0a^-^+97jvoi$+4_$9rs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['taggerxcash.pythonanywhere.com']
+ALLOWED_HOSTS = ['taggerxcash.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

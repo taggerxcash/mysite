@@ -15,6 +15,7 @@ from .models import Question, Choise
 def index(request):
     questions = Question.objects.all()
     
+    
     context = {
         "questions": questions
     }

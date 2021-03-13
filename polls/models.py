@@ -9,9 +9,9 @@ class Question(models.Model):
         return self.text
 
 # Модель для обработки варианта ответа на вопрос
-class Choise(models.Model):
+class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    # Связываем qustion & choises
+    # Связываем qustion & choices
     text = models.CharField(max_length=500)
     votes = models.IntegerField(default=0)
     def __str__(self):

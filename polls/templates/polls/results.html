@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
+    <title>results</title>
 </head>
 <body>
     <h1>{{question.text}}</h1>
     {% if question.choice_set.all != '' %}
-    <form method="POST" action="{% url 'polls:vote' question.pk %}">
-        {% csrf_token %}
+    <ul>
         {% for c in question.choice_set.all %}
-            <label for="c{{c.pk}}"><input name="choice" value="{{c.pk}}" type="checkbox" id="c{{c.pk}}">{{c.text}}</label><br>
+            <li>{{c.text}}: {{c.votes}}</li>
+            <br>
         {% endfor %}
-        <button type="submit">Send</button>
-    </form>   
+    </ul>
     {% endif %}
+    <a href="{% url 'polls:index' %}">Вернуться назад</a>
 </body>
 </html>
